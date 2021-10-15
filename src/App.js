@@ -70,11 +70,11 @@ const App = () => {
     schema.isValid(formValues).then(valid => setDisabled(!valid))
   }, [formValues])
 
-  // const history = useHistory();
+  
+  // let history = useHistory();
 
   // const routePizza = () => {
-  //   let path = `'/pizza'`;
-  //   history.push(path);
+  //   history.push("/pizza");
   // }
 
   return (
@@ -83,8 +83,8 @@ const App = () => {
         <Route exact path='/'>
           <h1>Lambda Eats</h1>
           <p>Please press button below to begin your pizza order!</p>
-          {/* <button id='order-pizza' onClick={() => history.push('/pizza')}>Pizza?</button> */}
-          <Link id="order-pizza" to='/pizza'>Pizza you say!?</Link>
+          {/* <button id="order-pizza" onClick={routePizza}>Pizza?</button> */}
+          <Link id="order-pizza" to='/pizza'>Pizza?</Link>
         </Route>
         <Route path='/pizza'>
           <Form
