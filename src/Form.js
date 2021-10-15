@@ -61,6 +61,7 @@ export default function Form(props) {
                     </select>
                 </label>
 
+            <div id='checks'>
                 <h3>Add Toppings</h3>  {/* Checkboxes */}
                 <label>Cheese
                     <input
@@ -108,6 +109,7 @@ export default function Form(props) {
                         value={values.instructions}
                     />
                 </label>
+            </div>
             </div>
 
             <div className='form-submit'>

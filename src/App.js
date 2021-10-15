@@ -82,15 +82,15 @@ const App = () => {
 
   return (
 
-    // If I 
-
     <div>
+      <h1>Lambda Eats</h1>
         <Route exact path='/'>
+        <p>Please press button below to begin your pizza order!</p>
           <Home />
-          {/* <h1>Lambda Eats</h1>
-          <p>Please press button below to begin your pizza order!</p>
-          <Link id="order-pizza" to='/pizza'>Pizza?</Link>
-          <button onClick={routePizza} id="order-pizza">Pizza?</button> */}
+          {/* <h1>Lambda Eats</h1> */}
+          {/* <p>Please press button below to begin your pizza order!</p> */}
+          {/* <Link id="order-pizza" to='/pizza'>Pizza?</Link> */}
+          {/* <button onClick={routePizza} id="order-pizza">Pizza?</button> */}
         </Route>
         <Route path='/pizza'>
           <Form
