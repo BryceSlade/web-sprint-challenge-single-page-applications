@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import {BrowserRouter, Route, Link, useHistory} from 'react-router-dom';
 import Form from './Form';
 import schema from './Schema'
+import Home from './Home'
 
 const initialFormValues = {
   name: '',
@@ -71,20 +72,25 @@ const App = () => {
   }, [formValues])
 
   
-  // let history = useHistory();
+  // const history = useHistory()
 
-  // const routePizza = () => {
-  //   history.push("/pizza");
-  // }
+  //   const routePizza = () => {
+  //       history.push("/pizza");
+  //   }
+
+
 
   return (
+
+    // If I 
+
     <div>
-      <BrowserRouter>
         <Route exact path='/'>
-          <h1>Lambda Eats</h1>
+          <Home />
+          {/* <h1>Lambda Eats</h1>
           <p>Please press button below to begin your pizza order!</p>
-          {/* <button id="order-pizza" onClick={routePizza}>Pizza?</button> */}
           <Link id="order-pizza" to='/pizza'>Pizza?</Link>
+          <button onClick={routePizza} id="order-pizza">Pizza?</button> */}
         </Route>
         <Route path='/pizza'>
           <Form
@@ -95,7 +101,6 @@ const App = () => {
             errors={formErrors}
           />
         </Route>
-      </BrowserRouter>
     </div>
   );
 };
