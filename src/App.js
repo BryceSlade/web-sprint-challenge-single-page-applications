@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import * as yup from 'yup';
-import {BrowserRouter, Route, Link, useHistory} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Form from './Form';
 import schema from './Schema'
 import Home from './Home'
@@ -71,15 +71,6 @@ const App = () => {
     schema.isValid(formValues).then(valid => setDisabled(!valid))
   }, [formValues])
 
-  
-  // const history = useHistory()
-
-  //   const routePizza = () => {
-  //       history.push("/pizza");
-  //   }
-
-
-
   return (
 
     <div>
@@ -87,10 +78,6 @@ const App = () => {
         <Route exact path='/'>
         <p>Please press button below to begin your pizza order!</p>
           <Home />
-          {/* <h1>Lambda Eats</h1> */}
-          {/* <p>Please press button below to begin your pizza order!</p> */}
-          {/* <Link id="order-pizza" to='/pizza'>Pizza?</Link> */}
-          {/* <button onClick={routePizza} id="order-pizza">Pizza?</button> */}
         </Route>
         <Route path='/pizza'>
           <Form

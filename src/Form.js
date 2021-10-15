@@ -1,22 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const InputStyle = styled.div`
-    height: 50vh;
-    border: 1px solid red;
-    align-content: 
-`;
-
-const SubmitDivStyle = styled.div`
-    padding-left: 40%;
-    border: 1px solid red;
-`;
-
-const TitleStyle = styled.h3`
-    border: 1px solid red;
-    text-align: center;
-`;
-
 export default function Form(props) {
 
     const {values, submit, change, disabled, errors,} = props
